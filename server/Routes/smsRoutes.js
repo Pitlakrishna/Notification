@@ -1,7 +1,8 @@
-import { smsController } from "../Controller/smsController"
-import express from express
+import express from "express";
+import { smsController } from "../Controller/smsController.js";
 
+const routes = express.Router();
 
-const routes = express.Router()
+routes.post("/send", smsController);
 
-routes.post("/send", smsController)
+export default routes;
